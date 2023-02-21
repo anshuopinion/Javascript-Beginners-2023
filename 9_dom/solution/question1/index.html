@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questions 1</title>
+  </head>
+  <body>
+    <main>
+      <li>
+        <!-- Using javascript change href url to https://dosomecoding.com -->
+        <a href="https://google.com">Google.com</a>
+      </li>
+    </main>
+    <script>
+      const selectAnchor = document.getElementsByTagName("a")[0];
+      selectAnchor.setAttribute("href", "https://dosomecoding.com");
+      selectAnchor.innerText = "Do Some coding";
+      console.log(selectAnchor);
+    </script>
+  </body>
+</html>
