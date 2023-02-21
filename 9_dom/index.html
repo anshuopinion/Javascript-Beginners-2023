@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      .active {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- This is also a node -->
+    <header data-new="coding" id="nav">
+      <nav class="common">
+        <ul>
+          <li class="active demo">Home</li>
+          <li>About</li>
+          <li>Dashboard</li>
+        </ul>
+      </nav>
+    </header>
+    <main class="common">
+      <button id="changeBtn" onclick="alertMe(this)">Color Change</button>
+      <button id="changeBtn">Color Change</button>
+      <!-- <h1 name="sample">This is text</h1>
+      <h1 name="sample">This is text</h1> -->
+    </main>
+    <!-- <footer class="common">This footer text</footer> -->
+    <script>
+      // how to access nodes in dom
+      // console.log(document.body.parentNode);
+      // console.log(document.body.childNodes);
+      // console.log(document.body.childNodes[3].childNodes[1].childNodes[1]);
+
+      // how to access element nodes
+      // console.log(document.body.children[1].previousElementSibling);
+
+      // how to access element using id and class and tag names
+
+      // console.log(document.getElementById("nav"));
+      // console.log(document.getElementsByClassName("common"));
+      // console.log(document.getElementsByName("sample")[0]);
+      // console.log(document.getElementsByTagName("footer"));
+
+      // query Selector
+
+      // console.log(document.querySelector("#nav"));
+      // console.log(document.querySelector(".common"));
+      // console.log(document.querySelector("footer"));
+
+      // const commonElements = document.querySelectorAll(".common");
+
+      // for (let common of commonElements) {
+      //   console.log(common);
+      // }
+
+      // const convertedCommonElements = Array.from(commonElements);
+
+      // const commonElements = document.querySelectorAll("ul > li:last-child");
+      // console.log(commonElements[0].innerHTML);
+
+      // const attributeValue = document
+      //   .getElementById("nav")
+      //   .getAttribute("style");
+      // document.getElementById("nav").setAttribute("data-random", 5);
+      // document.getElementById("nav").removeAttribute("data-random");
+
+      // console.log(document.getElementById("nav").dataset.new);
+      // const newFooterText = "This is new text";
+      // const heading = document.createElement("h1");
+      // const text = document.createTextNode("I am base");
+      // const text1 = document.createTextNode("HI,Guys");
+      // heading.append(text);
+      // heading.prepend(text1);
+      // const footer = document.getElementsByTagName("footer")[0];
+      // footer.append(heading);
+      // footer.before(heading);
+
+      // footer.after(heading);
+
+      // footer.replaceWith(newFooterText);
+
+      // document.getElementsByTagName("nav")[0].remove();
+
+      // console.log(heading);
+
+      // const listItems = document.getElementsByTagName("li");
+
+      // console.log(listItems[0].classList.remove("active"));
+      // listItems[0].classList.add("active");
+      // listItems[0].classList.toggle("active");
+
+      // console.log(listItems);
+
+      // const manyHtmlCode = `<nav class="common">
+      //   <ul>
+      //     <li class="active demo">Home</li>
+      //     <li>About</li>
+      //     <li>Dashboard</li>
+      //   </ul>
+      // </nav>`;
+      // document.querySelector("footer").innerHTML = manyHtmlCode;
+      // document.querySelector("footer").innerText = manyHtmlCode;
+      // document.querySelector("footer").outerHTML = manyHtmlCode;
+
+      function alertMe(e) {
+        console.log(e.getAttribute("id"));
+
+        alert("You are doing wrong!");
+      }
+
+      // const changeBtnEl = document.getElementById("changeBtn");
+
+      // function random(number) {
+      //   return Math.floor(Math.random() * (number + 1));
+      // }
+
+      // function forChangeingColor(event) {
+      //   const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+      //   document.body.style.backgroundColor = rndCol;
+      // }
+
+      // changeBtnEl.addEventListener("click", forChangeingColor);
+      // changeBtnEl.removeEventListener("click", forChangeingColor);
+
+      // changeBtnEl.addEventListener("click", function forChangeingColor(event) {
+      //   const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+      //   document.body.style.backgroundColor = rndCol;
+      // });
+      // changeBtnEl.removeEventListener(
+      //   "click",
+      //   function forChangeingColor(event) {
+      //     const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+      //     document.body.style.backgroundColor = rndCol;
+      //   }
+      // );
+    </script>
+  </body>
+</html>
